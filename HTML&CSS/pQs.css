@@ -1,0 +1,23 @@
+h2{
+    text-align: center;
+color: orange;
+font-weight:lighter ;
+
+
+}
+p
+{
+    color: white; background-color: black;
+    letter-spacing: 10px;
+    font-size: 67px;
+    font-family: fantasy;
+
+}
+button{
+  color: white; background-color: blue;
+}
+h1{
+    text-align: right;
+    border: solid;
+    width: 50%;
+}

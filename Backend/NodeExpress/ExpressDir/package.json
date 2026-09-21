@@ -1,0 +1,16 @@
+{
+  "name": "expressdir",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Kirtiraj",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests\""
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

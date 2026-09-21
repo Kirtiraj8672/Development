@@ -1,0 +1,29 @@
+p {
+    color: #A52A2A  ;
+    line-height: 30px;
+    text-decoration: underline Ozymandias;
+}
+h1{
+    text-align: centre;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h3{
+    text-align: center;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}
+button{
+    color: blueviolet ;
+    background-color: white;
+}
+textarea{
+color: black;
+}
+span{
+    text-decoration: underline;
+}

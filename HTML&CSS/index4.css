@@ -1,0 +1,90 @@
+/*div{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 0, 0, 0.1);
+    margin:0 auto ;
+    margin-top: 10px;
+    transition: margin-top 2s ease-in-out 0.2s;
+    
+}
+#opacity{
+    background-color: #ffa511;
+    opacity: 0;
+}
+section{
+    margin-top: 100px;
+}                     
+
+
+
+div:nth-of-type(2n){
+    background-color: #f7db6a;
+    
+} 
+
+div:nth-of-type(3n){
+    background-color: #ebb02d;
+}
+
+#one{
+    transform: rotate(45deg);
+}
+#two{
+    transform: scale(0.5,2);
+}
+#three{
+    transform: translate(100px,100px);
+}
+#four{
+    transform: skew(45deg);
+}
+#five{
+    transform: rotate(30deg) translate(150px);
+}                           
+
+div{
+    width: 400px;
+    height: 200px;
+    background-color: #7aa874;
+    margin: 10px auto ;
+    background-image: url("866-536x354.jpg");
+    background-size: cover ;
+}*/  
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    text-align: center;
+    border: 3px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+#static{
+    background-color: yellow;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+
+#relative{
+    background-color: yellow;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+
+#absolute{
+    background-color: yellow;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#fixed{
+     background-color: yellow;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}

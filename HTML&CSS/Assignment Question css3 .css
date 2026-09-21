@@ -1,0 +1,21 @@
+#Q1{
+    height: 50px;
+    width: 300px;
+    background-color: gray;
+    border: 5px  dotted black ;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
+}
+div{
+    height: 100px;
+    width: 100px; 
+    border: 2px  solid black ;
+    border-radius: 100px;
+    display: inline-block;
+}
+li{
+    display: inline;
+}
