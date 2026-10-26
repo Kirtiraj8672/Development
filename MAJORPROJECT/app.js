@@ -61,6 +61,7 @@ app.get("/listings/:id" , async(req,res) => {
 
 //new route
 app.get("/listing/new" , (req,res) => {
+    res.render("listing/new.ejs" , {});
 
 })
 app.listen(8080 , () => {
