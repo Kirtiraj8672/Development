@@ -53,10 +53,9 @@ app.get("/listings" , async (req,res) => {
 })
 
 //new route
-app.get("/listing/new" , (req,res) => {
-    res.render("listing/new.ejs");
-
-})
+app.get("/listings/new" , (req,res) => {
+    res.render("listings/new.ejs");
+});
 
 //show route 
 app.get("/listings/:id" , async(req,res) => {
