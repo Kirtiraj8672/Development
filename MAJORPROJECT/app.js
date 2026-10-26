@@ -76,10 +76,10 @@ app.post("/listings", async (req, res) => {
 });
 
 //edit route 
-app.get("/listing/:id/edit" , async (req,res) => {
+app.get("/listings/:id/edit" , async (req,res) => {
     let{id} = req.params;
     const listing =await Listing.findById(id);
-    res.render("listing/edit.ejs" , {listing});
+    res.render("listings/edit.ejs" , {listing});
 })
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
