@@ -29,17 +29,22 @@ app.get("/" , (req,res) => {
 })
 
 //test route 
-app.get("/testListing" , async(req,res) => {
-    let sampleListing = new Listing({
-        title : "My New Villa",
-        description:"by the beach",
-        price: 1200,
-        location: "Calangute , Goa",
-        country: "India"
-    })
-   await sampleListing.save();
-   console.log("Sample was saved ");
-   res.send("successful testing");
+// app.get("/testListing" , async(req,res) => {
+//     let sampleListing = new Listing({
+//         title : "My New Villa",
+//         description:"by the beach",
+//         price: 1200,
+//         location: "Calangute , Goa",
+//         country: "India"
+//     })
+//    await sampleListing.save();
+//    console.log("Sample was saved ");
+//    res.send("successful testing");
+// })
+
+//index route 
+app.get("/listings" , (req,res) => {
+    Listing
 })
 
 app.listen(8080 , () => {
