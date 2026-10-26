@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 
+//url encoder 
+app.use(express.urlencoded({extended: true}));
+
 //module importing 
 const Listing = require("../MAJORPROJECT/models/listing");
 
@@ -21,6 +24,7 @@ async function main(){
 const path = require("path");
 app.set("views" , path.join(__dirname,"views"));
 app.set("view engine" ,"ejs");
+
 
 
 //root
@@ -48,6 +52,11 @@ app.get("/listings" , async (req,res) => {
     res.render("listings/index.ejs" , {allListings});
 })
 
+//show route 
+app.get("/listings/:id" , async(req,res) => {
+    let {id} = request.params;
+    const listing = await Listing.findById(id);
+})
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
 })
