@@ -38,10 +38,8 @@ app.get("/testListing" , async(req,res) => {
         country: "India"
     })
    await sampleListing.save();
-   console.log("Sample ");
-   
-
-
+   console.log("Sample was saved ");
+   res.send("successful testing");
 })
 
 app.listen(8080 , () => {
