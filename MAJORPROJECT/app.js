@@ -58,6 +58,11 @@ app.get("/listings/:id" , async(req,res) => {
     const listing = await Listing.findById(id);
     res.render("listings/show.ejs" , {listing});
 })
+
+//new route
+app.get("/listing/new" , (req,res) => {
+
+})
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
 })
