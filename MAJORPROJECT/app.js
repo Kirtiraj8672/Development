@@ -67,8 +67,8 @@ app.get("/listings/:id" , async(req,res) => {
 //create route 
 app.post("/listings", async(req,res) =>{
     // let {title, description, image , price , country ,location} =req.body;
-    new Listing(req.body.listing);
-    console.log(listing);
+    const newListing =  new Listing(req.body.listing);
+    console.log(newListing);
 })
 
 
