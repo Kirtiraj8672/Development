@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 
+//module importing 
+const Listing = require("../MAJORPROJECT/models/listing");
+
 //mongoose
 const mongoose = require("mongoose");
 
@@ -20,9 +23,24 @@ app.set("views" , path.join(__dirname,"views"));
 app.set("view engine" ,"ejs");
 
 
-
+//root
 app.get("/" , (req,res) => {
     res.send("hi i am groot");
+})
+
+//test route 
+app.get("/testListing" , async(req,res) => {
+    let sampleListing = new Listing({
+        title : "My New Villa",
+        description:"by the beach",
+        price: 1200,
+        location: "Calangute , Goa",
+        country: "India"
+    })
+   await sampleListing.save();
+   
+
+
 })
 
 app.listen(8080 , () => {
