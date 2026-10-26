@@ -52,6 +52,12 @@ app.get("/listings" , async (req,res) => {
     res.render("listings/index.ejs" , {allListings});
 })
 
+//new route
+app.get("/listing/new" , (req,res) => {
+    res.render("listing/new.ejs");
+
+})
+
 //show route 
 app.get("/listings/:id" , async(req,res) => {
     let {id} = req.params;
@@ -59,11 +65,7 @@ app.get("/listings/:id" , async(req,res) => {
     res.render("listings/show.ejs" , {listing});
 })
 
-//new route
-app.get("/listing/new" , (req,res) => {
-    res.render("listing/new.ejs" , {});
 
-})
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
 })
