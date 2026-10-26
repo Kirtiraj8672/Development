@@ -38,6 +38,7 @@ app.get("/testListing" , async(req,res) => {
         country: "India"
     })
    await sampleListing.save();
+   console.log("Sample ");
    
 
 
