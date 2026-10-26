@@ -64,13 +64,16 @@ app.get("/listings/:id" , async(req,res) => {
     res.render("listings/show.ejs" , {listing});
 })
 
-//create route 
-app.post("/listings", async(req,res) =>{
-    // let {title, description, image , price , country ,location} =req.body;
-    const newListing =  new Listing(req.body.listing);
-    console.log(newListing);
-})
+// Create route
+app.post("/listings", async (req, res) => {
+    const newListing = new Listing(req.body.listing);
 
+    await newListing.save();
+
+    console.log("New listing saved!");
+
+    res.redirect("/listings");
+});
 
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
