@@ -44,7 +44,9 @@ app.get("/" , (req,res) => {
 
 //index route 
 app.get("/listings" , (req,res) => {
-    Listing
+    Listing.find({}).then(res => {
+        console.log(res);
+    });
 })
 
 app.listen(8080 , () => {
