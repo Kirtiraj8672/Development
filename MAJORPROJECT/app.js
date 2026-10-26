@@ -64,6 +64,9 @@ app.get("/listings/:id" , async(req,res) => {
     res.render("listings/show.ejs" , {listing});
 })
 
+//create route 
+app.post
+
 
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
