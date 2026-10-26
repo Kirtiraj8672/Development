@@ -65,7 +65,7 @@ app.get("/listings/:id" , async(req,res) => {
 })
 
 //create route 
-app.post
+app.post("/l")
 
 
 app.listen(8080 , () => {
