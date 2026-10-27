@@ -25,6 +25,16 @@ const path = require("path");
 app.set("views" , path.join(__dirname,"views"));
 app.set("view engine" ,"ejs");
 
+//method-override 
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+//ejs-mate
+const ejsMate = require("ejs-mate");
+app.engine("ejs" , ejsMate);
+
+//to use static file and css file 
+app.use(express.static(path.join(__dirname,"/public")));
 
 
 //root
@@ -80,6 +90,22 @@ app.get("/listings/:id/edit" , async (req,res) => {
     let{id} = req.params;
     const listing =await Listing.findById(id);
     res.render("listings/edit.ejs" , {listing});
+})
+
+//update route 
+app.put("/listings/:id" , async(req,res) => {
+    let {id} = req.params;
+    await Listing.findByIdAndUpdate(id,{...req.body.listing})
+    res.redirect(`/listings/${id}`);
+
+})
+
+//DELETE ROUTE 
+app.delete("/listings/:id", async (req,res) => {
+    let {id} = req.params;
+    let deletedListing = await Listing.findByIdAndDelete(id);   
+    console.log(deletedListing);
+    res.redirect("/listings");
 })
 
 
