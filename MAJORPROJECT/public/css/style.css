@@ -106,3 +106,8 @@ body{
      border: none !important;
      
 }
+
+/* show page */
+.show-img{
+    height: 30vh;
+}
