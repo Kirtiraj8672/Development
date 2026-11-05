@@ -30,7 +30,8 @@ app.use("/api" , (req,res,next) =>{
     if(token == "giveaccess"){
         next();
     }else{
-        res.send("ACCESS DENIED")    }
+        res.send("ACCESS DENIED");
+        }
 });
 //api for tokenstring 
 app.get("/api" ,(req,res) =>{
