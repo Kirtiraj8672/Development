@@ -17,12 +17,12 @@ const app = express();
 // });
 
 
-//specific path middle ware 
-//for random 
-app.use("/random" ,(req,res,next)=> {
-    console.log("this is only for random");
-    next();
-});
+// //specific path middle ware 
+// //for random 
+// app.use("/random" ,(req,res,next)=> {
+//     console.log("this is only for random");
+//     next();
+// });
 //api for tokenstring 
 app.get("/api" ,(req,res) =>{
     res.send("hi i am api wala data ")
