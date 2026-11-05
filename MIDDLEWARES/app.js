@@ -3,18 +3,22 @@ const express = require("express");
 const app = express();
 
 
-app.use((req,res,next)=>{
-    // let{ query } = req.query;
-    // console.log(query);
-    console.log("hi , i am 1st middleware");
-    // res.send("Middleware finished"); 
-    next();
-});
+// app.use((req,res,next)=>{
+//     // let{ query } = req.query;
+//     // console.log(query);
+//     console.log("hi , i am 1st middleware");
+//     // res.send("Middleware finished"); 
+//     next();
+// });
 
-app.use((req,res,next)=>{
-    console.log("hi , i am 2nd middleware");
-    next();
-});
+// app.use((req,res,next)=>{
+//     console.log("hi , i am 2nd middleware");
+//     next();
+// });
+
+//utility middleware 
+//logger
+app
 
 app.get("/" ,(req,res)=>{
     res.send("hi, i am groot");
