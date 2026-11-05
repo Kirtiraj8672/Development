@@ -26,7 +26,7 @@ const app = express();
 
 //middleware for api webpage
 app.use("/api" , (req,res,next) =>{
-    console.log();
+    let {}
 });
 //api for tokenstring 
 app.get("/api" ,(req,res) =>{
