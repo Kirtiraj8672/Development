@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 
-app.use((req,res)=>{
+app.use((req,res,next)=>{
     let{ query } = req.query;
     console.log(query);
     console.log("hi , i am middleware");
