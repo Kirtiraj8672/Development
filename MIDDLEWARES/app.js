@@ -42,7 +42,7 @@ app.get("/random",(req,res)=>{
 
 //404
 app.use((req,res,next)=>{
-    res.send("page not found!!!")
+    res.status(404).send("page not found!!!")
 })
 app.listen(8080, () => {
     console.log("server listening to port 8080");
