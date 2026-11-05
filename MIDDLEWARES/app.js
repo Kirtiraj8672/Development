@@ -4,6 +4,8 @@ const app = express();
 
 
 app.use((req,res)=>{
+    let{ query } = req.query;
+    console.log(query);
     console.log("hi , i am middleware");
     res.send("Middleware finished");
 });
