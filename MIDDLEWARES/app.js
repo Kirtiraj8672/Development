@@ -16,19 +16,19 @@ const app = express();
 //     next();
 // });
 
-//utility middleware 
-//logger
-app.use((req,res,next)=>{
-    req.time = new Date(Date.now()).toString();
-    console.log(req.method , req.hostname ,req.path, req.time);
-    next();
-});
-
 
 //specific path middle ware 
 //for random 
 app.use("/random" ,(req,res,next)=> {
     console.log("this is only for random");
+    next();
+});
+
+//utility middleware 
+//logger
+app.use((req,res,next)=>{
+    req.time = new Date(Date.now()).toString();
+    console.log(req.method , req.hostname ,req.path, req.time);
     next();
 });
 
@@ -39,6 +39,7 @@ app.get("/" ,(req,res)=>{
 app.get("/random",(req,res)=>{
     res.send("this is a random page ");
 });
+
 
 //404
 app.use((req,res,next)=>{
