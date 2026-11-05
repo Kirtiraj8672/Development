@@ -19,7 +19,7 @@ const app = express();
 //utility middleware 
 //logger
 app.use((req,res,next)=>{
-    req.time = Date.now();
+    req.time = new Date(Date.now()).toString();
     console.log(req.method , req.hostname ,req.path, req.time);
     next();
 });
