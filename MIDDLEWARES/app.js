@@ -19,7 +19,8 @@ const app = express();
 //utility middleware 
 //logger
 app.use((req,res,next)=>{
-    console.log(req.method , req.hostname ,req.path);
+    req.time = Date.now();
+    console.log(req.method , req.hostname ,req.path, req.time);
     next();
 });
 
