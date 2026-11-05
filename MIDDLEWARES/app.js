@@ -30,7 +30,7 @@ app.use((req,res,next)=>{
 app.use("/random" ,(req,res,next)=> {
     console.log("this is only for random");
     next();
-})
+});
 
 app.get("/" ,(req,res)=>{
     res.send("hi, i am groot");
