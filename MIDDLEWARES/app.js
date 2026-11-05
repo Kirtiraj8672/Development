@@ -28,8 +28,10 @@ app.use((req,res,next)=>{
 //specific path middle ware 
 //for random 
 app.use("/random" ,(req,res,next)=> {
-    console.log("this is only for random ");
+    console.log("this is only for random");
+    next();
 })
+
 app.get("/" ,(req,res)=>{
     res.send("hi, i am groot");
 });
