@@ -5,6 +5,7 @@ const app = express();
 
 app.use((req,res)=>{
     console.log("hi , i am middleware");
+    res.send("Middleware finished");
 });
 
 app.get("/" ,(req,res)=>{
