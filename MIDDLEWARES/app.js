@@ -7,7 +7,7 @@ app.use((req,res,next)=>{
     // let{ query } = req.query;
     // console.log(query);
     console.log("hi , i am 1st middleware");
-    // res.send("Middleware finished");
+    // res.send("Middleware finished"); khggggkg
     next();
 });
 
