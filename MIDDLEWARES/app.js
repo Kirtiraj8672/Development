@@ -8,11 +8,11 @@ app.use(()=>{
 });
 
 app.get("/" ,(req,res)=>{
-    res.send();
+    res.send("hi, i am groot");
 });
 
 app.get("/random",(req,res)=>{
-    res.send("this is a random page ")
+    res.send("this is a random page ");
 });
 
 app.listen(8080, () => {
