@@ -18,7 +18,10 @@ const app = express();
 
 //utility middleware 
 //logger
-app
+app.use((req,res,next)=>{
+    console.log(req);
+    next();
+});
 
 app.get("/" ,(req,res)=>{
     res.send("hi, i am groot");
