@@ -63,7 +63,7 @@ app.use((err,req,res,next)=>{
 })
 
 
-app.get("/wrong" ,(req,res) => {
+app.get("/err" ,(req,res) => {
     abcd= tytyty;
 });
 
