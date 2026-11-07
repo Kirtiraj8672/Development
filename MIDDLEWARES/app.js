@@ -61,7 +61,10 @@ app.use((req,res,next)=>{
     res.status(404).send("page not found!!!")
 })
 
-//error handling 
+//error handling
+
+app.use((err,req,res,next))
+
 
 // app.get("/wrong" ,(req,res) => {
 //     abcd= tytyty;
