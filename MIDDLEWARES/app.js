@@ -63,9 +63,9 @@ app.use((req,res,next)=>{
 
 //error handling 
 
-app.get("/wrong" ,(req,res) => {
-    abcd= tytyty;
-});
+// app.get("/wrong" ,(req,res) => {
+//     abcd= tytyty;
+// });
 
 app.listen(8080, () => {
     console.log("server listening to port 8080");
