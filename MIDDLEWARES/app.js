@@ -60,6 +60,13 @@ app.get("/random",(req,res)=>{
 app.use((req,res,next)=>{
     res.status(404).send("page not found!!!")
 })
+
+//error handling 
+
+app.get("/wrong" ,(req,res) => {
+
+});
+
 app.listen(8080, () => {
     console.log("server listening to port 8080");
 })
