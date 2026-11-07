@@ -69,7 +69,7 @@ app.use((err,req,res,next)=>{
     next(err);
 })
 app.use((err,req,res,next)=>{
-    console.log("-----------------------ERROR-2 m----------------------");
+    console.log("-----------------------ERROR-2 MIDDLE WARE ----------------------");
     next(err);
 })
 
