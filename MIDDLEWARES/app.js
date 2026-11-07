@@ -63,15 +63,17 @@ app.use((err,req,res,next)=>{
 })
 
 
-// app.get("/wrong" ,(req,res) => {
-//     abcd= tytyty;
-// });
+app.get("/wrong" ,(req,res) => {
+    abcd= tytyty;
+});
 
 
-//404
-app.use((req,res,next)=>{
-    res.status(404).send("page not found!!!")
-})
+// //404
+// app.use((req,res,next)=>{
+//     res.status(404).send("page not found!!!")
+// })
+
+
 
 app.listen(8080, () => {
     console.log("server listening to port 8080");
