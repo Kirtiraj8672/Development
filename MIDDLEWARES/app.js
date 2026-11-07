@@ -25,16 +25,17 @@ const app = express();
 // });
 
 //middleware for api webpage
-app.use("/api" , (req,res,next) =>{
+//here we have made middleware into function and passed 
+let checkToken = (req,res,next) =>{
     let {token} =req.query;
     if(token == "giveaccess"){
         next();
     }else{
         res.send("ACCESS DENIED");
         }
-});
+};
 //api for tokenstring 
-app.get("/api" ,(req,res) =>{
+app.get("/api", checkToken ,(req,res) =>{  //here checkToken is run as middleware 
     res.send("hi i am api wala data ")
 });
 
