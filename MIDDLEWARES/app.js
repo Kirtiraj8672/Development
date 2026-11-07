@@ -55,18 +55,23 @@ app.get("/random",(req,res)=>{
     res.send("this is a random page ");
 });
 
-//error handling
 
-app.use((err,req,res,next)=>{
-    console.log("-----------------------ERROR-----------------------");
-    next();
-})
 
 
 app.get("/err" ,(req,res) => {
     abcd= tytyty;
 });
 
+//error handling
+
+app.use((err,req,res,next)=>{
+    console.log("-----------------------ERROR-----------------------");
+    next(err);
+})
+app.use((err,req,res,next)=>{
+    console.log("-----------------------ERROR-2 m----------------------");
+    next(err);
+})
 
 // //404
 // app.use((req,res,next)=>{
