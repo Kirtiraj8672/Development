@@ -55,22 +55,23 @@ app.get("/random",(req,res)=>{
     res.send("this is a random page ");
 });
 
-
-//404
-app.use((req,res,next)=>{
-    res.status(404).send("page not found!!!")
-})
-
 //error handling
 
 app.use((err,req,res,next)=>{
     console.log("-----------------------ERROR-----------------------");
+    next();
 })
 
 
 // app.get("/wrong" ,(req,res) => {
 //     abcd= tytyty;
 // });
+
+
+//404
+app.use((req,res,next)=>{
+    res.status(404).send("page not found!!!")
+})
 
 app.listen(8080, () => {
     console.log("server listening to port 8080");
