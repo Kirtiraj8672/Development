@@ -64,7 +64,7 @@ app.use((req,res,next)=>{
 //error handling 
 
 app.get("/wrong" ,(req,res) => {
-
+    abcd= tytyty;
 });
 
 app.listen(8080, () => {
