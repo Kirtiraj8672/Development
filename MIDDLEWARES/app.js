@@ -31,7 +31,7 @@ let checkToken = (req,res,next) =>{
     if(token == "giveaccess"){
         next();
     }else{
-        res.send("ACCESS DENIED");
+        throw new Error("ACCESS DENIED");
         }
 };
 //api for tokenstring 
