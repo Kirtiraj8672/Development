@@ -1,1 +1,3 @@
-class ExpressError extends
+class ExpressError extends Error{
+    
+}
