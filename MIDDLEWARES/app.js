@@ -1,7 +1,7 @@
 //express
 const express = require("express");
 const app = express();
-
+const ExpressError = require("./ExpressError");
 
 // app.use((req,res,next)=>{
 //     // let{ query } = req.query;
@@ -31,7 +31,7 @@ let checkToken = (req,res,next) =>{
     if(token == "giveaccess"){
         next();
     }else{
-        throw new Error("ACCESS DENIED");
+        throw new ExpressError(401, "ACCESS DENIED");
         }
 };
 //api for tokenstring 
@@ -56,22 +56,36 @@ app.get("/random",(req,res)=>{
 });
 
 
-
+//error handling
 
 app.get("/err" ,(req,res) => {
     abcd= tytyty;
 });
 
-//error handling
+
+
+//error class for admin route 
+
+app.get("/admin" ,(req,res)=>{
+    throw new ExpressError(403, "access to admin is forbidden");
+})
 
 app.use((err,req,res,next)=>{
-    console.log("-----------------------ERROR-----------------------");
-    next(err);
+    let{status = 500 , message} = err;
+    res.status(status).send(message);
 })
-app.use((err,req,res,next)=>{
-    console.log("-----------------------ERROR-2 MIDDLE WARE ----------------------");
-    next(err);
-})
+
+
+
+
+
+
+
+
+// app.use((err,req,res,next)=>{
+//     console.log("-----------------------ERROR-2 MIDDLE WARE ----------------------");
+//     next(err);
+// })
 
 // //404
 // app.use((req,res,next)=>{
