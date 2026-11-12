@@ -70,7 +70,7 @@ app.get("/admin" ,(req,res)=>{
     throw new ExpressError(403, "access to admin is forbidden");
 })
 
-app.use((err,req,res,next)=>{
+app.use((err,req,res,next)=>{ 
     let{status = 500 , message} = err;
     res.status(status).send(message);
 })
