@@ -66,7 +66,7 @@ app.get("/err" ,(req,res) => {
 
 app.use((err,req,res,next)=>{
     console.log("-----------------------ERROR-----------------------");
-    next(err);sab kuch 
+    next(err);
 })
 app.use((err,req,res,next)=>{
     console.log("-----------------------ERROR-2 MIDDLE WARE ----------------------");
