@@ -33,7 +33,9 @@ app.use(express.urlencoded({extended: true }));
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 
-//requireing
+//requiring ExpressError
+const ExpressError = require("./ExpressError");
+
 
 
 //basic chat creation 
