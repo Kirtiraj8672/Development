@@ -58,8 +58,8 @@ app.get("/chats",async (req,res) => {
         let chats = await Chat.find();
      //console.log(chats);
      res.render("index.ejs" , {chats});
-     }catch{
-        
+     }catch(err){
+        next(err);
      }
 });
 
@@ -105,9 +105,14 @@ app.get("/chats/:id", async (req, res, next) => {
 
 //edit route 
 app.get("/chats/:id/edit" ,async (req,res) => {
-    let {id} = req.params;
-    let chat  = await Chat.findById(id);
-    res.render("edit.ejs" , {chat});
+    try {
+        let {id} = req.params;
+        let chat  = await Chat.findById(id);
+        res.render("edit.ejs" , {chat});
+    }catch(err){
+        next(err);
+     }
+    
 });
 
 //update route
