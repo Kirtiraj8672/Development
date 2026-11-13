@@ -95,15 +95,15 @@ app.post("/chats", (req,res) => {
 app.get("/chats/:id", async (req, res, next) => {
     try{
         let { id } = req.params;
-    let chat = await Chat.findById(id);
+        let chat = await Chat.findById(id);
 
-    if (!chat) {
-        return next(new ExpressError(404, "Chat not found"));
-    }
+        if (!chat) {
+            return next(new ExpressError(404, "Chat not found"));
+        }
 
-    res.render("edit.ejs", { chat });
-        }catch(err){
-            next(err);}l
+        res.render("edit.ejs", { chat });
+    }catch(err){
+        next(err);}l
 });
 
 //edit route 
