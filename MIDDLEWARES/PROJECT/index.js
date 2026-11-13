@@ -100,7 +100,7 @@ function asyncWrap(fn){
 
 }
 //NEW show route 
-app.get("/chats/:id", async (req, res, next) => {
+app.get("/chats/:id", asyncWrap (req, res, next) => {
     try{
         let { id } = req.params;
         let chat = await Chat.findById(id);
