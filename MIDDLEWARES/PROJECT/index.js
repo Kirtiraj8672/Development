@@ -81,7 +81,7 @@ app.post("/chats", (req,res) => {
 app.get("/chats/:id" ,async(req, res, next) =>{
     let{id} = req.params;
     let chat = await Chat.findById(id);
-    
+    res.render("edit.ejs" , { chat });
 
 })
 
