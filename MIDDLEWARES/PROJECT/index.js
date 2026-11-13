@@ -151,6 +151,11 @@ app.delete("/chats/:id" , async(req,res) => {
 })
 
 //error name print 
+
+const handleValidationErr = (err)=>{
+    
+
+}
 app.use((err,req,res,next)=>{
     console.log(err.name);
     if(err.name === "ValidationError"){
