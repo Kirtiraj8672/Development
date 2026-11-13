@@ -160,7 +160,7 @@ const handleValidationErr = (err)=>{
 app.use((err,req,res,next)=>{
     console.log(err.name);
     if(err.name === "ValidationError"){
-        handleValidationErr(err);
+        err = handleValidationErr(err);
         
     }
     next(err);
