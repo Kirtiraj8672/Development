@@ -117,7 +117,8 @@ app.delete("/chats/:id" , async(req,res) => {
 
 //error handeling 
 app.use((err,req,res,next) => {
-    let {status = 500 , message = ""}
+    let {status = 500 , message = "Some Error Occured"} = err;
+    res.status(status).send(message);
 })
 
 
