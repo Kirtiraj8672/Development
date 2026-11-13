@@ -1,9 +1,10 @@
+
 (() => {
     'use strict';
 
     const forms = document.querySelectorAll('.needs-validation');
 
-    for (const form of forms) {
+    Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
 
             if (!form.checkValidity()) {
@@ -12,6 +13,7 @@
             }
 
             form.classList.add('was-validated');
-        });
-    }
+
+        }, false);
+    });
 })();

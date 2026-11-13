@@ -7,11 +7,17 @@
             <form method="POST" action="/listings" novalidate class="needs-validation">
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
-                    <input name="listing[title]" 
-                        placeholder="Add a catchy Title" 
-                        type="text" 
+                    <input
+                        id="title"
+                        name="listing[title]"
+                        placeholder="Add a catchy Title"
+                        type="text"
                         class="form-control"
-                        required >
+                        required
+                    >
+                    <div class="invalid-feedback">
+                        Please enter a title.
+                    </div>
                 </div>
 
                 <div class="mb-3">
