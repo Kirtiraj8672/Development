@@ -93,7 +93,8 @@ app.post("/chats", (req,res) => {
 
 //NEW show route 
 app.get("/chats/:id", async (req, res, next) => {
-    let { id } = req.params;
+    try{
+        let { id } = req.params;
     let chat = await Chat.findById(id);
 
     if (!chat) {
@@ -101,6 +102,8 @@ app.get("/chats/:id", async (req, res, next) => {
     }
 
     res.render("edit.ejs", { chat });
+        }catch(err){
+            next(err);}l
 });
 
 //edit route 
