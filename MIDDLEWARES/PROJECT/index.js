@@ -154,7 +154,7 @@ app.delete("/chats/:id" , async(req,res) => {
 app.use((err,req,res,next)=>{
     console.log(err.name);
     if(err.name === "ValidationError"){
-        
+        console.log("this was a validation error ");
     }
     next(err);
 })
