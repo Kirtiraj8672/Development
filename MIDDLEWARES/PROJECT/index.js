@@ -131,10 +131,15 @@ app.put("/chats/:id" , async (req, res) => {
 
 //delete route 
 app.delete("/chats/:id" , async(req,res) => {
-    let {id } = req.params;
-    let deletedChat = await Chat.findByIdAndDelete(id);
-    console.log(deletedChat);
-    res.redirect("/chats");
+    try{
+        let {id } = req.params;
+        let deletedChat = await Chat.findByIdAndDelete(id);
+        console.log(deletedChat);
+        res.redirect("/chats");
+    }catch(err){
+        next(err);
+    }
+    
 })
 
 //error handeling middleware
