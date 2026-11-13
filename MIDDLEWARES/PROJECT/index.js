@@ -61,6 +61,7 @@ app.get("/chats",async (req,res) => {
 
 //new route
 app.get("/chats/new" , (req,res) => {
+    throw new ExpressError
     res.render("new.ejs");
 });
 
@@ -115,7 +116,7 @@ app.delete("/chats/:id" , async(req,res) => {
     res.redirect("/chats");
 })
 
-//error handeling 
+//error handeling middleware
 app.use((err,req,res,next) => {
     let {status = 500 , message = "Some Error Occured"} = err;
     res.status(status).send(message);
