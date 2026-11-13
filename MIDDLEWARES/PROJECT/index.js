@@ -77,6 +77,9 @@ app.post("/chats", (req,res) => {
     res.redirect("/chats");
 });
 
+//NEW show route 
+
+
 //edit route 
 app.get("/chats/:id/edit" ,async (req,res) => {
     let {id} = req.params;
