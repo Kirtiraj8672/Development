@@ -67,19 +67,21 @@ app.get("/chats/new" , (req,res) => {
 
 //create route 
 app.post("/chats", (req,res) => {
-    let {from , to , msg} = req.body;
-    let newChat = new Chat({
-        from : from , 
-        to: to,
-        msg: msg,
-        created_at : new Date(),
-    });
-    newChat.save().then((res)=>{
-        console.log("chat was saved ");
-    }).catch((err)=>{
-        console.log(err);
-    });
-    res.redirect("/chats");
+    try{
+        let {from , to , msg} = req.body;
+        let newChat = new Chat({
+            from : from , 
+            to: to,
+            msg: msg,
+            created_at : new Date(),
+        });
+        newChat.save().then((res)=>{
+            console.log("chat was saved ");
+        }).catch((err)=>{
+            console.log(err);
+        });
+        res.redirect("/chats");
+    }
 });
 
 //NEW show route 
