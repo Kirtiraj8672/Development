@@ -100,7 +100,7 @@ function asyncWrap(fn){
 
 }
 //NEW show route 
-app.get("/chats/:id", asyncWrap (req, res, next) => {
+app.get("/chats/:id", asyncWrap(async (req, res, next) => {
     try{
         let { id } = req.params;
         let chat = await Chat.findById(id);
@@ -112,7 +112,7 @@ app.get("/chats/:id", asyncWrap (req, res, next) => {
         res.render("edit.ejs", { chat });
     }catch(err){
         next(err);}l
-});
+}));
 
 //edit route 
 app.get("/chats/:id/edit" ,async (req,res) => {
