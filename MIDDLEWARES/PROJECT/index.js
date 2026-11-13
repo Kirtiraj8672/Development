@@ -78,7 +78,11 @@ app.post("/chats", (req,res) => {
 });
 
 //NEW show route 
+app.get("/chats/:id" ,async(req, res, next) =>{
+    let{id} = req.params;
+    let chat = await 
 
+})
 
 //edit route 
 app.get("/chats/:id/edit" ,async (req,res) => {
