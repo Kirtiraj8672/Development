@@ -54,9 +54,13 @@ app.get("/" , (req,res) =>{
 
 //index route
 app.get("/chats",async (req,res) => {
-     let chats = await Chat.find();
+     try {
+        let chats = await Chat.find();
      //console.log(chats);
      res.render("index.ejs" , {chats});
+     }catch{
+        
+     }
 });
 
 //new route
