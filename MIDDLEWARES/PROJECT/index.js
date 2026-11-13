@@ -115,6 +115,11 @@ app.delete("/chats/:id" , async(req,res) => {
     res.redirect("/chats");
 })
 
+//error handeling 
+app.use((err,req,res,next) => {
+    let {status = 500 , message = ""}
+})
+
 
 
 app.listen(8080,() =>{
