@@ -151,7 +151,10 @@ app.delete("/chats/:id" , async(req,res) => {
 })
 
 //error name print 
-app.use(re)
+app.use((err,req,res,next)=>{
+    console.log(err.name);
+    next(err);
+})
 
 //error handeling middleware
 app.use((err,req,res,next) => {
