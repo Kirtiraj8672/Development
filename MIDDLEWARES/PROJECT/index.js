@@ -12,7 +12,7 @@ main().then( () => {
 });
 
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatsapp");
+    await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
 }
 //importing chats.js
 const Chat = require("./models/chat");
