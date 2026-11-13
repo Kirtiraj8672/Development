@@ -61,7 +61,7 @@ app.get("/chats",async (req,res) => {
 
 //new route
 app.get("/chats/new" , (req,res) => {
-    throw new ExpressError
+    throw new ExpressError(404, "Page not found");
     res.render("new.ejs");
 });
 
