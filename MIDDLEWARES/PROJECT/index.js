@@ -89,15 +89,16 @@ app.post("/chats", (req,res) => {
 });
 
 //NEW show route 
-app.get("/chats/:id" ,async(req, res, next) =>{
-    let{id} = req.params;
+app.get("/chats/:id", async (req, res, next) => {
+    let { id } = req.params;
     let chat = await Chat.findById(id);
-    if(!chat){
-        next(new ExpressError(500, "chat not found")); 
-    }
-    res.render("edit.ejs" , { chat });
 
-})
+    if (!chat) {
+        return next(new ExpressError(404, "Chat not found"));
+    }
+
+    res.render("edit.ejs", { chat });
+});
 
 //edit route 
 app.get("/chats/:id/edit" ,async (req,res) => {
