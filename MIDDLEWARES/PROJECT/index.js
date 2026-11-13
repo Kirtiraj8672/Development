@@ -150,6 +150,9 @@ app.delete("/chats/:id" , async(req,res) => {
     
 })
 
+//error name print 
+app.use(re)
+
 //error handeling middleware
 app.use((err,req,res,next) => {
     let {status = 500 , message = "Some Error Occured"} = err;
