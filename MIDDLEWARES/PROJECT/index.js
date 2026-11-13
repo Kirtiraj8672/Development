@@ -33,6 +33,8 @@ app.use(express.urlencoded({extended: true }));
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 
+//requireing
+
 
 //basic chat creation 
 // let chat1 = new Chat ({
