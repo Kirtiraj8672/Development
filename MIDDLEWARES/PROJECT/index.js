@@ -82,6 +82,10 @@ app.post("/chats", (req,res) => {
         });
         res.redirect("/chats");
     }
+    catch(err){
+        next(err);
+        
+    }
 });
 
 //NEW show route 
