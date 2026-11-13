@@ -91,6 +91,9 @@ app.post("/chats", (req,res) => {
     }
 });
 
+function asyncWrap(fn){
+
+}
 //NEW show route 
 app.get("/chats/:id", async (req, res, next) => {
     try{
