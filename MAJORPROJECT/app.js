@@ -6,7 +6,7 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 
 //module importing 
-const Listing = require("../MAJORPROJECT/models/listing");
+const Listing = require("./models/listing");
 
 //mongoose
 const mongoose = require("mongoose");
