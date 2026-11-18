@@ -138,6 +138,14 @@ app.all("/{*splat}", (req, res, next) => {
 //     //res.status(statusCode).send(message);
 // });
 
+app.use((err, req, res, next) => {
+    console.log("ERROR:", err.message);
+
+    let { statusCode = 500, message = "Something went wrong" } = err;
+
+    res.status(statusCode).send(message);
+});
+
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
 });
