@@ -81,7 +81,7 @@ app.get("/listings/:id" , wrapAsync(async(req,res) => {
 app.post("/listings", wrapAsync(async (req, res) => {
 
         if(!req.body.listing){
-            new 
+            throw new ExpressError(400, "send valid data for listing "); 
         }
         
         // console.log("FORM DATA:", req.body);
