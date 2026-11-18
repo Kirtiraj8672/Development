@@ -77,7 +77,8 @@ app.get("/listings/:id" , async(req,res) => {
 // Create route
 app.post("/listings", async (req, res) => {
 
-    console.log("FORM DATA:", req.body);
+    try{
+        console.log("FORM DATA:", req.body);
 
     const newListing = new Listing(req.body.listing);
 
@@ -86,6 +87,7 @@ app.post("/listings", async (req, res) => {
     await newListing.save();
 
     res.redirect("/listings");
+    }
 });
 //edit route 
 app.get("/listings/:id/edit" , async (req,res) => {
@@ -111,9 +113,10 @@ app.delete("/listings/:id", async (req,res) => {
 })
 
 //middleware
-app.use((err,req,res,next){
-    
-})
+app.use((err,req,res,next)=>{
+    res.send("some thing went wrong ");
+
+});
 
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
