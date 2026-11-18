@@ -60,10 +60,10 @@ app.get("/" , (req,res) => {
 // })
 
 //index route 
-app.get("/listings" , async (req,res) => {
+app.get("/listings" , wrapAsync(async (req,res) => {
     const allListings = await Listing.find({});
     res.render("listings/index.ejs" , {allListings});
-})
+}))
 
 //new route
 app.get("/listings/new" , (req,res) => {
@@ -71,11 +71,11 @@ app.get("/listings/new" , (req,res) => {
 });
 
 //show route 
-app.get("/listings/:id" , async(req,res) => {
+app.get("/listings/:id" , wrapAsync(async(req,res) => {
     let {id} = req.params;
     const listing = await Listing.findById(id);
     res.render("listings/show.ejs" , {listing});
-})
+}));
 
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
