@@ -41,7 +41,7 @@ const wrapAsync = require("./utils/wrapAsync");
 const ExpressError = require("./utils/ExpressError");
 
 //importing joi schema validation
-const{listingSchema} = require("./schema")
+const{listingSchema} = require("./schema.js")
 //root
 app.get("/" , (req,res) => {
     res.send("hi i am groot");
