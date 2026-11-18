@@ -109,7 +109,7 @@ app.put("/listings/:id" , wrapAsync(async(req,res) => {
         if(!req.body.listing){
             throw new ExpressError(400, "send valid data for listing "); 
         }
-        
+
     let {id} = req.params;
     await Listing.findByIdAndUpdate(id,{...req.body.listing})
     res.redirect(`/listings/${id}`);
@@ -134,7 +134,8 @@ app.all("/{*splat}", (req, res, next) => {
 //middleware
 app.use((err,req,res,next)=>{
     let{statusCode = 500 , message = "Something went wrong!!! " } = err;
-    res.status(statusCode).send(message);
+    
+    //res.status(statusCode).send(message);
 });
 
 app.listen(8080 , () => {
