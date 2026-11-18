@@ -134,7 +134,7 @@ app.all("/{*splat}", (req, res, next) => {
 //middleware
 app.use((err,req,res,next)=>{
     let{statusCode = 500 , message = "Something went wrong!!! " } = err;
-    res.render("error.ejs");
+    res.render("error.ejs",{message});
     //res.status(statusCode).send(message);
 });
 
