@@ -80,11 +80,11 @@ app.get("/listings/:id" , async(req,res) => {
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
         
-        console.log("FORM DATA:", req.body);
+        // console.log("FORM DATA:", req.body);
 
         const newListing = new Listing(req.body.listing);
 
-        console.log("NEW LISTING:", newListing);
+        // console.log("NEW LISTING:", newListing);
 
         await newListing.save();
 
