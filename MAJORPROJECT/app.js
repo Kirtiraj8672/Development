@@ -40,7 +40,8 @@ app.use(express.static(path.join(__dirname,"/public")));
 const wrapAsync = require("./utils/wrapAsync");
 const ExpressError = require("./utils/ExpressError");
 
-
+//importing joi schema validation
+const{listingSchema} = require("./schema")
 //root
 app.get("/" , (req,res) => {
     res.send("hi i am groot");
