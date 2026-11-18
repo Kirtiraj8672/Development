@@ -79,7 +79,7 @@ app.get("/listings/:id" , wrapAsync(async(req,res) => {
 
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
-
+        //if due to 
         if(!req.body.listing){
             throw new ExpressError(400, "send valid data for listing "); 
         }
