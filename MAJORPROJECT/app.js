@@ -105,6 +105,11 @@ app.get("/listings/:id/edit" , wrapAsync(async (req,res) => {
 
 //update route 
 app.put("/listings/:id" , wrapAsync(async(req,res) => {
+    //due to client mistake server can not handle this error 
+        if(!req.body.listing){
+            throw new ExpressError(400, "send valid data for listing "); 
+        }
+        
     let {id} = req.params;
     await Listing.findByIdAndUpdate(id,{...req.body.listing})
     res.redirect(`/listings/${id}`);
