@@ -110,6 +110,10 @@ app.delete("/listings/:id", async (req,res) => {
     res.redirect("/listings");
 })
 
+//middleware
+app.use((err,req,res,next){
+    
+})
 
 app.listen(8080 , () => {
     console.log("server is listing to port 8080");
