@@ -96,8 +96,12 @@ app.post("/listings", wrapAsync(async (req, res) => {
             throw new ExpressError(400, "Discription is missing"); 
         }
         if(!newListing.location){
-            throw new ExpressError(400, "location is missing"); 
+            throw new ExpressError(400, "Location is missing"); 
         }
+        if(!newListing.price){
+            throw new ExpressError(400, "Price is missing"); 
+        }
+        
 
         // console.log("NEW LISTING:", newListing);
 
