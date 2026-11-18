@@ -79,7 +79,7 @@ app.get("/listings/:id" , wrapAsync(async(req,res) => {
 
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
-        //if due to 
+        //due to client mistake server can not handle this error 
         if(!req.body.listing){
             throw new ExpressError(400, "send valid data for listing "); 
         }
