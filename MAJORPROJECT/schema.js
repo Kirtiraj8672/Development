@@ -2,5 +2,7 @@
 const Joi = require('joi');
 
 const listingSchema = Joi.object({
-    listing :
+    listing : Joi.object({
+        
+    })
 })
