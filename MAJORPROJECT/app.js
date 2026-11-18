@@ -93,7 +93,7 @@ app.get("/listings/:id" , wrapAsync(async(req,res) => {
 }));
 
 // Create route
-app.post("/listings", wrapAsync(async (req, res) => {
+app.post("/listings",validateListing, wrapAsync(async (req, res) => {
         //due to client mistake server can not handle this error 
         // if(!req.body.listing){
         //     throw new ExpressError(400, "send valid data for listing "); 
@@ -120,7 +120,7 @@ app.get("/listings/:id/edit" , wrapAsync(async (req,res) => {
 }));
 
 //update route 
-app.put("/listings/:id" , wrapAsync(async(req,res) => {
+app.put("/listings/:id" ,validateListing, wrapAsync(async(req,res) => {
     //due to client mistake server can not handle this error 
         if(!req.body.listing){
             throw new ExpressError(400, "send valid data for listing "); 
