@@ -78,23 +78,20 @@ app.get("/listings/:id" , async(req,res) => {
 })
 
 // Create route
-app.post("/listings", async (req, res) => {
+app.post("/listings", wrapAsync(async (req, res) => {
 
-    try{
+    
         console.log("FORM DATA:", req.body);
 
-    const newListing = new Listing(req.body.listing);
+        const newListing = new Listing(req.body.listing);
 
-    console.log("NEW LISTING:", newListing);
+        console.log("NEW LISTING:", newListing);
 
-    await newListing.save();
+        await newListing.save();
 
-    res.redirect("/listings");
-    }catch(err){
-        next(err);
-
-    }
-});
+        res.redirect("/listings");
+        }
+    ));
 //edit route 
 app.get("/listings/:id/edit" , async (req,res) => {
     let{id} = req.params;
