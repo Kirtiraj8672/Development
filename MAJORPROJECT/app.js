@@ -90,10 +90,13 @@ app.post("/listings", wrapAsync(async (req, res) => {
 
         //if mmissing show error validation schema
         if(!newListing.title){
-            throw new ExpressError(400, "Discription is missing"); 
+            throw new ExpressError(400, "Title is missing"); 
         }
         if(!newListing.description){
             throw new ExpressError(400, "Discription is missing"); 
+        }
+        if(!newListing.location){
+            throw new ExpressError(400, "location is missing"); 
         }
 
         // console.log("NEW LISTING:", newListing);
