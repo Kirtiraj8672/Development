@@ -88,6 +88,10 @@ app.post("/listings", wrapAsync(async (req, res) => {
 
         const newListing = new Listing(req.body.listing);
 
+        if(!newListing.description){
+            throw new ExpressError(400, "send valid data for listing "); 
+        }
+
         // console.log("NEW LISTING:", newListing);
 
         await newListing.save();
