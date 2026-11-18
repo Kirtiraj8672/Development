@@ -118,8 +118,10 @@ app.delete("/listings/:id", async (req,res) => {
 
 //
 app.all("*" , (Req,res,next) => {
-    next(new)
-})
+    next(new ExpressError(404, "Page Not Found"));
+});
+
+
 //middleware
 app.use((err,req,res,next)=>{
     let{statusCode , message } = err;
