@@ -43,19 +43,22 @@ const ExpressError = require("./utils/ExpressError");
 //importing joi schema validation
 const{listingSchema} = require("./schema.js");
 
-//validation of schema in middleware form 
-
-const validateListing = (req , res , next){
-    
-}
-
-
-
 
 //root
 app.get("/" , (req,res) => {
     res.send("hi i am groot");
 })
+
+//validation of schema in middleware form 
+
+const validateListing = (req , res , next){
+    
+    let result = listingSchema.validate(req.body);
+        console.log(result);
+        if(result.error){
+            throw new ExpressError(400,result.error);
+        }
+}
 
 //test route 
 // app.get("/testListing" , async(req,res) => {
@@ -98,15 +101,8 @@ app.post("/listings", wrapAsync(async (req, res) => {
         
         // console.log("FORM DATA:", req.body);
 
-        let result = listingSchema.validate(req.body);
-        console.log(result);
-        if(result.error){
-            throw new ExpressError(400,result.error);
-        }
+        
         const newListing = new Listing(req.body.listing);
-
-        
-        
 
         // console.log("NEW LISTING:", newListing);
 
