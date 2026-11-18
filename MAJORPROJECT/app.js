@@ -79,8 +79,7 @@ app.get("/listings/:id" , async(req,res) => {
 
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
-
-    
+        
         console.log("FORM DATA:", req.body);
 
         const newListing = new Listing(req.body.listing);
@@ -92,6 +91,7 @@ app.post("/listings", wrapAsync(async (req, res) => {
         res.redirect("/listings");
         }
     ));
+    
 //edit route 
 app.get("/listings/:id/edit" , async (req,res) => {
     let{id} = req.params;
