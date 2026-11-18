@@ -1,4 +1,6 @@
 //requiring joi 
 const Joi = require('joi');
 
-const listing
+const listingSchema = Joi.object({
+    listing :
+})
