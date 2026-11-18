@@ -87,6 +87,9 @@ app.post("/listings", async (req, res) => {
     await newListing.save();
 
     res.redirect("/listings");
+    }catch(err){
+        next(err);
+
     }
 });
 //edit route 
