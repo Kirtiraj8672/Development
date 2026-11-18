@@ -116,7 +116,7 @@ app.delete("/listings/:id", async (req,res) => {
 })
 
 
-//
+// Catch-all route: Handles requests to undefined routes and throws a 404 error
 app.all("/{*splat}", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found"));
 });
