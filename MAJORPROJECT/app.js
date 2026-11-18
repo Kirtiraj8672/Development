@@ -51,9 +51,8 @@ app.get("/" , (req,res) => {
 
 //validation of schema in middleware form 
 
-const validateListing = (req , res , next){
-    
-    let result = listingSchema.validate(req.body);
+const validateListing = (req , res , next) => {
+    let {error} = listingSchema.validate(req.body);
         console.log(result);
         if(result.error){
             throw new ExpressError(400,result.error);
