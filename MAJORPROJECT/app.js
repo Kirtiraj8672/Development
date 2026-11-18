@@ -79,6 +79,10 @@ app.get("/listings/:id" , wrapAsync(async(req,res) => {
 
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
+
+        if(!req.body.listing){
+            
+        }
         
         // console.log("FORM DATA:", req.body);
 
