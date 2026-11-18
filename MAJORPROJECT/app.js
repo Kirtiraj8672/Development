@@ -88,8 +88,12 @@ app.post("/listings", wrapAsync(async (req, res) => {
 
         const newListing = new Listing(req.body.listing);
 
+        //if mmissing show error validation schema
+        if(!newListing.title){
+            throw new ExpressError(400, "Discription is missing"); 
+        }
         if(!newListing.description){
-            throw new ExpressError(400, "send valid data for listing "); 
+            throw new ExpressError(400, "Discription is missing"); 
         }
 
         // console.log("NEW LISTING:", newListing);
