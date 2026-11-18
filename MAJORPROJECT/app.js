@@ -43,7 +43,15 @@ const ExpressError = require("./utils/ExpressError");
 //importing joi schema validation
 const{listingSchema} = require("./schema.js");
 
-//validation of schema 
+//validation of schema in middleware form 
+
+const validateListing = (req , res , next){
+    
+}
+
+
+
+
 //root
 app.get("/" , (req,res) => {
     res.send("hi i am groot");
