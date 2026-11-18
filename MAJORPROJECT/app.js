@@ -90,8 +90,8 @@ app.post("/listings", wrapAsync(async (req, res) => {
         
         // console.log("FORM DATA:", req.body);
 
-        listingSchema.validate(req.body);
-
+        let result = listingSchema.validate(req.body);
+        console.log(result);
         const newListing = new Listing(req.body.listing);
 
         
