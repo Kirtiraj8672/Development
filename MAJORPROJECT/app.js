@@ -53,9 +53,10 @@ app.get("/" , (req,res) => {
 
 const validateListing = (req , res , next) => {
     let {error} = listingSchema.validate(req.body);
-        console.log(result);
-        if(result.error){
+        if(error){
             throw new ExpressError(400,result.error);
+        }else{
+            next();
         }
 }
 
