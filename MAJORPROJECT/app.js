@@ -116,7 +116,10 @@ app.delete("/listings/:id", async (req,res) => {
 })
 
 
-
+//
+app.all("*" , (Req,res,next) => {
+    next(new)
+})
 //middleware
 app.use((err,req,res,next)=>{
     let{statusCode , message } = err;
