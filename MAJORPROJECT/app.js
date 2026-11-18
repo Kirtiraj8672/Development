@@ -36,7 +36,8 @@ app.engine("ejs" , ejsMate);
 //to use static file and css file 
 app.use(express.static(path.join(__dirname,"/public")));
 
-//
+//importing wrapAsync
+const wrapAsync = require("./utils/wrapAsync");
 
 
 //root
