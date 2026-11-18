@@ -41,7 +41,9 @@ const wrapAsync = require("./utils/wrapAsync");
 const ExpressError = require("./utils/ExpressError");
 
 //importing joi schema validation
-const{listingSchema} = require("./schema.js")
+const{listingSchema} = require("./schema.js");
+
+
 //root
 app.get("/" , (req,res) => {
     res.send("hi i am groot");
@@ -82,27 +84,15 @@ app.get("/listings/:id" , wrapAsync(async(req,res) => {
 // Create route
 app.post("/listings", wrapAsync(async (req, res) => {
         //due to client mistake server can not handle this error 
-        if(!req.body.listing){
-            throw new ExpressError(400, "send valid data for listing "); 
-        }
+        // if(!req.body.listing){
+        //     throw new ExpressError(400, "send valid data for listing "); 
+        // }
         
         // console.log("FORM DATA:", req.body);
 
         const newListing = new Listing(req.body.listing);
 
-        //if mmissing show error validation schema
-        if(!newListing.title){
-            throw new ExpressError(400, "Title is missing"); 
-        }
-        if(!newListing.description){
-            throw new ExpressError(400, "Discription is missing"); 
-        }
-        if(!newListing.location){
-            throw new ExpressError(400, "Location is missing"); 
-        }
-        if(!newListing.price){
-            throw new ExpressError(400, "Price is missing"); 
-        }
+        
         
 
         // console.log("NEW LISTING:", newListing);
