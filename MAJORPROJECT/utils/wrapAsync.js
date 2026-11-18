@@ -1,4 +1,4 @@
-function wrapAsync(fn){
+ module.export = (fn){
     return function(req , res , next){
         fn(req, res , next).catch(next);
 
