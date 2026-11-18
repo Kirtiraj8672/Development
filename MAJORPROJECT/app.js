@@ -105,7 +105,7 @@ app.put("/listings/:id" , async(req,res) => {
     await Listing.findByIdAndUpdate(id,{...req.body.listing})
     res.redirect(`/listings/${id}`);
 
-})
+});
 
 //DELETE ROUTE 
 app.delete("/listings/:id", async (req,res) => {
@@ -117,7 +117,7 @@ app.delete("/listings/:id", async (req,res) => {
 
 
 //
-app.all("*" , (Req,res,next) => {
+app.all("*" , (req,res,next) => {
     next(new ExpressError(404, "Page Not Found"));
 });
 
