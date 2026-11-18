@@ -1,6 +1,4 @@
-
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
 
 const listingSchema = new Schema({
@@ -8,29 +6,28 @@ const listingSchema = new Schema({
         type: String,
         required: true,
     },
-
     description: {
         type: String,
     },
-
     image: {
         type: String,
-        default: "https://images.unsplash.com/photo-1792607851482-8f7874e269b7?q=80&w=987&auto=format&fit=crop"
+        default: "https://images.unsplash.com/photo-1792607851482-8f7874e269b7?q=80&w=987&auto=format&fit=crop",
+        set: (v) =>
+            v === ""
+                ? "https://images.unsplash.com/photo-1792607851482-8f7874e269b7?q=80&w=987&auto=format&fit=crop"
+                : v,
     },
-
     price: {
         type: Number,
         required: true,
-        min: 0
+        min: 0,
     },
-
     location: {
         type: String,
     },
-
     country: {
         type: String,
-    }
+    },
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
