@@ -115,6 +115,8 @@ app.delete("/listings/:id", async (req,res) => {
     res.redirect("/listings");
 })
 
+
+
 //middleware
 app.use((err,req,res,next)=>{
     let{statusCode , message } = err;
