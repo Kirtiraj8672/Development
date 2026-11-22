@@ -1,5 +1,6 @@
 //mongoose
 const mongoose = require("mongoose");
+const { type } = require("node:os");
 const {Schema} = mongoose;
 
 main().then(()=>{
@@ -16,12 +17,10 @@ const orderSchema = new Schema({
     item :{
         type : String,
     },
-    addresses: [
-        {
-            _id: false,
-            location: String,
-            city : String,
-        }
-    ]
+    price : {
+        type : Number,
+    }
 
 });
+
+const Order = mongoose.model(Order , );
