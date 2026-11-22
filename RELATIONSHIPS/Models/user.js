@@ -39,5 +39,7 @@ const addUser = async() => {
     });
 
     user1.addresses.push({location : "P32 WallStreet" , city : "London"});
-    await user
+    await user1.save();
 }
+
+addUser();
