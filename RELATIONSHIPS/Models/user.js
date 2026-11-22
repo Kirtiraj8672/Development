@@ -31,7 +31,10 @@ const User = mongoose.model("User" , userSchema);
 const addUser = async() => {
     let user1 = new User({
         username: "Kirtiraj Vansadiya",
-        
+        addresses:[{
+            location: "221B Baker Street",
+            city : "London",
+        }],
 
     })
 }
