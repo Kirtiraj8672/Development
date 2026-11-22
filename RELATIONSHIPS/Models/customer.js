@@ -43,8 +43,8 @@ const addCustomer = async () => {
         name : "Raju bro",
     });
     //extracting or finding order and pushing it
-    let order1 = await Order.findOne({item: "Chips"}).populate("orders");
-    let order2 = await Order.findOne({item: "Chocolate"}).populate("orders");
+    let order1 = await Order.findOne({item: "Chips"});
+    let order2 = await Order.findOne({item: "Chocolate"});
 
     cust1.orders.push(order1);
     cust1.orders.push(order2);
