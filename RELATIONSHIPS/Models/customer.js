@@ -1,6 +1,7 @@
 //mongoose
 const mongoose = require("mongoose");
 const { type } = require("node:os");
+const { ref } = require("node:process");
 const {Schema} = mongoose;
 
 main().then(()=>{
@@ -27,7 +28,8 @@ const customerSchema = new Schema ({
     name : String , 
     orders : [
         {
-            type : Schema.
+            type : Schema.Types.ObjectId,
+            ref: "order"
         }
     ]
 })
