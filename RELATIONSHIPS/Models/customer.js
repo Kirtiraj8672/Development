@@ -38,6 +38,10 @@ const Order = mongoose.model("Order" , orderSchema);
 
 const Customer = mongoose.model("Customer" , customerSchema);
 
+const addCustomer = async () => {
+    let cust 1
+}
+
 
 //order adding 
 // const addOrder = async ()=> {
