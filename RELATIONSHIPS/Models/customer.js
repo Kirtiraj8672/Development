@@ -36,7 +36,7 @@ const customerSchema = new Schema ({
 
 const Order = mongoose.model("Order" , orderSchema);
 
-const Customer = 
+const Customer = mongoose.model("Customer" , customerSchema);
 
 
 //order adding 
