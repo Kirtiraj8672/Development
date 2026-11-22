@@ -10,3 +10,18 @@ main().then(()=>{
 async function main(){
     await mongoose.connect("mongodb://127.0.0.1:27017/relationDemo");
 }
+
+//schema 
+const orderSchema = new Schema({
+    item :{
+        type : String,
+    },
+    addresses: [
+        {
+            _id: false,
+            location: String,
+            city : String,
+        }
+    ]
+
+});
