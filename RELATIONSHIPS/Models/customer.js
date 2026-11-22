@@ -39,7 +39,10 @@ const Order = mongoose.model("Order" , orderSchema);
 const Customer = mongoose.model("Customer" , customerSchema);
 
 const addCustomer = async () => {
-    let cust 1
+    let cust1 = new Customer({
+        name : "Raju bro",
+        order
+    })
 }
 
 
