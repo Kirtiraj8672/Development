@@ -18,6 +18,7 @@ const userSchema = new Schema({
     },
     addresses: [
         {
+            _id: false,
             location: String,
             city : String,
         }
@@ -32,7 +33,6 @@ const addUser = async() => {
     let user1 = new User({
         username: "Kirtiraj Vansadiya",
         addresses:[{
-            _id: false,
             location: "221B Baker Street",
             city : "London",
         }],
