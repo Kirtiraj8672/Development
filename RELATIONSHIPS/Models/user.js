@@ -27,3 +27,5 @@ const userSchema = new Schema({
 
 //creating model from schema 
 const User = mongoose.model("User" , userSchema);
+
+const addUser = async() => 
