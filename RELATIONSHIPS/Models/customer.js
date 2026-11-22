@@ -27,6 +27,10 @@ const Order = mongoose.model("Order" , orderSchema);
 
 const addOrder = async ()=> {
     await Order.insertMany(
-        {});
+        { item : "Samosa" , price: 12},
+        {item : "chips", price: 10},
+        {item : "Cho", price: 10},
+
+    );
     
 };
