@@ -23,7 +23,9 @@ const orderSchema = new Schema({
 
 });
 
-const customer 
+const customerSchema = new Schema ({
+    
+})
 
 const Order = mongoose.model("Order" , orderSchema);
 
