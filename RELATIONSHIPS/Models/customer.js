@@ -25,6 +25,9 @@ const orderSchema = new Schema({
 
 const Order = mongoose.model("Order" , orderSchema);
 
-const addOrder = async => () {
+const addOrder = async ()=> {
+    let user1 = new Order({
+        
+    })
     
-}
+};
