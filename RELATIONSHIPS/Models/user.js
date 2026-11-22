@@ -28,4 +28,10 @@ const userSchema = new Schema({
 //creating model from schema 
 const User = mongoose.model("User" , userSchema);
 
-const addUser = async() => 
+const addUser = async() => {
+    let user1 = new User({
+        username: "Kirtiraj Vansadiya",
+        
+
+    })
+}
