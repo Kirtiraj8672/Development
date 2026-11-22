@@ -36,5 +36,8 @@ const addUser = async() => {
             city : "London",
         }],
 
-    })
+    });
+
+    user1.addresses.push({location : "P32 WallStreet" , city : "London"});
+    await user
 }
