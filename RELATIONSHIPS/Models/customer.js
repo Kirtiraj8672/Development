@@ -49,10 +49,12 @@ const addCustomer = async () => {
     cust1.orders.push(order1);
     cust1.orders.push(order2);
 
-    let res = await cust1.save();
+    let result = await cust1.save();
+    console.log(result);
 
 }
 
+addCustomer();
 
 //order adding 
 // const addOrder = async ()=> {
