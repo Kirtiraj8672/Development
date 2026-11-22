@@ -41,8 +41,8 @@ const Customer = mongoose.model("Customer" , customerSchema);
 const addCustomer = async () => {
     let cust1 = new Customer({
         name : "Raju bro",
-        order
     })
+    let order1 = await Order.findOne();
 }
 
 
