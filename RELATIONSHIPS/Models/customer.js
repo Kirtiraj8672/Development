@@ -24,7 +24,12 @@ const orderSchema = new Schema({
 });
 
 const customerSchema = new Schema ({
-    
+    name : String , 
+    orders : [
+        {
+            type : Schema.
+        }
+    ]
 })
 
 const Order = mongoose.model("Order" , orderSchema);
