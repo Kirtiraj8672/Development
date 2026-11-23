@@ -84,3 +84,6 @@ const Post = mongoose.model("Post", postSchema);
 
 //delete a post and user 
 
+const del = await () => {
+    Post.deleteById("6b0476f9d6b7b4a2a9c7da94");
+}
