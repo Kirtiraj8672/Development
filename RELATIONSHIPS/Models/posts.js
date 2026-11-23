@@ -67,20 +67,28 @@ const Post = mongoose.model("Post", postSchema);
 
 //making post for same user rajesh 
 
-const addData = async () => {
-    let user = await User.findOne({username : "Rajesh Kumar"});
+// const addData = async () => {
+//     let user = await User.findOne({username : "Rajesh Kumar"});
 
-    let post2 = new Post({
-        content: "Bye Bye :)",
-        likes: 233,
-    });
+//     let post2 = new Post({
+//         content: "Bye Bye :)",
+//         likes: 233,
+//     });
 
-    post2.user = user; 
+//     post2.user = user; 
 
-    await post2.save();
-}
+//     await post2.save();
+// }
 
-addData();
+// addData();
+
+
+
+
+
+
+
+
 
 //delete a post and user 
 
