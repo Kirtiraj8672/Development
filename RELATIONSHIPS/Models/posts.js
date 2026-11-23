@@ -56,6 +56,10 @@ const addData = async () => {
         likes: 7
     });
 
+    post1.user = user1; 
+
     await user1.save();
-    await Post1.data();
+    await post1.data();
 }
+
+addData();
