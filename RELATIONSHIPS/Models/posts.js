@@ -51,7 +51,11 @@ const addData = async () => {
         email : "rajesh@gmail.com"
     });
 
-    let Post1 = new Post({
-        content: ""
-    })
+    let post1 = new Post({
+        content: "Hello World",
+        likes: 7
+    });
+
+    await user1.save();
+    await Post1.data();
 }
