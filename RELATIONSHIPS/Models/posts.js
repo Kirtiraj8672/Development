@@ -1,5 +1,6 @@
 //mongoose
 const mongoose = require("mongoose");
+const { type } = require("node:os");
 
 const {Schema} = mongoose;
 
@@ -13,4 +14,11 @@ async function main(){
 }
 
 
-const Use
+const userScehma = new Schema ({
+    item :{
+        type: String,
+    },
+    price : {
+        type: Number,
+    }
+})
