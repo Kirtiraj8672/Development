@@ -36,6 +36,9 @@ const postSchema = new Schema({
     }
 })
 
-
+//
 const User = mongoose.model("User" , userScehma);
-const Post - mongoose
+const Post = mongoose.model("Post", postSchema);
+
+
+//function to add data 
