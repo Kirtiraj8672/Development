@@ -47,6 +47,7 @@ const Post = mongoose.model("Post", postSchema);
 
 const addData = async () => {
     let user1 = new User({
-        
-    })
+        username : "Rajesh Kumar",
+        email : "rajesh@gmail.com"
+    });
 }
