@@ -82,7 +82,14 @@ const Post = mongoose.model("Post", postSchema);
 
 // addData();
 
+// to get detail about post code 
 
+const getData = async() => {
+
+    
+};
+
+getData();
 
 
 
