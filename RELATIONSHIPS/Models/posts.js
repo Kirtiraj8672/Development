@@ -15,10 +15,19 @@ async function main(){
 
 
 const userScehma = new Schema ({
-    item :{
+    username :{
         type: String,
     },
-    price : {
-        type: Number,
+    email : {
+        type: String,
+    }
+})
+
+const postSchema = new Schema({
+    content :{
+        type: String,
+    },
+    like : {
+        type : Number ,
     }
 })
