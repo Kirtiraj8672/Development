@@ -50,4 +50,8 @@ const addData = async () => {
         username : "Rajesh Kumar",
         email : "rajesh@gmail.com"
     });
+
+    let Post1 = new Post({
+        content: ""
+    })
 }
