@@ -86,7 +86,7 @@ const Post = mongoose.model("Post", postSchema);
 
 const getData = async() => {
 
-    
+    let result = await Post.findOne({}).populate("users");
 };
 
 getData();
