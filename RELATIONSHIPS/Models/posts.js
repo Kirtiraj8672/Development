@@ -67,25 +67,25 @@ const Post = mongoose.model("Post", postSchema);
 
 //making post for same user rajesh 
 
-// const addData = async () => {
-//     let user = await User.findOne({username : "Rajesh Kumar"});
+const addData = async () => {
+    let user = await User.findOne({username : "Rajesh Kumar"});
 
-//     let post2 = new Post({
-//         content: "Bye Bye :)",
-//         likes: 233,
-//     });
+    let post2 = new Post({
+        content: "Bye Bye :)",
+        likes: 233,
+    });
 
-//     post2.user = user; 
+    post2.user = user; 
 
-//     await post2.save();
-// }
+    await post2.save();
+}
 
-// addData();
+addData();
 
 //delete a post and user 
 
-const del = async() => {
-    await Post.findByIdAndDelete("6b0476f9d6b7b4a2a9c7da94");
-    await User.findByIdAndDelete("6b02e85ffbcd9678a44efced");
-};
-del();
+// const del = async() => {
+//     await Post.findByIdAndDelete("6b0476f9d6b7b4a2a9c7da94");
+//     await User.findByIdAndDelete("6b02e85ffbcd9678a44efced");
+// };
+// del();
