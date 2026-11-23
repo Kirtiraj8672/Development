@@ -14,6 +14,8 @@ async function main(){
 }
 
 
+
+//schema 
 const userScehma = new Schema ({
     username :{
         type: String,
@@ -36,9 +38,11 @@ const postSchema = new Schema({
     }
 })
 
-//
+//make models 
 const User = mongoose.model("User" , userScehma);
 const Post = mongoose.model("Post", postSchema);
 
 
 //function to add data 
+
+const add
