@@ -65,15 +65,13 @@ const Post = mongoose.model("Post", postSchema);
 // addData();
 
 
-//makeing post for same user rajesh 
-const addData = async () => {
-    let user1 = new User({
-        username : "Rajesh Kumar",
-        email : "rajesh@gmail.com"
-    });
+//making post for same user rajesh 
 
-    let post1 = new Post({
-        content: "Hello World",
+const addData = async () => {
+    let user1 = findById
+
+    let post2 = new Post({
+        content: "Bye Bye :)",
         likes: 7
     });
 
