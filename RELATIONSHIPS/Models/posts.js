@@ -68,7 +68,7 @@ const Post = mongoose.model("Post", postSchema);
 //making post for same user rajesh 
 
 const addData = async () => {
-    let user = await User.find({username : "Rajesh Kumar"});
+    let user = await User.findOne({username : "Rajesh Kumar"});
 
     let post2 = new Post({
         content: "Bye Bye :)",
@@ -77,8 +77,7 @@ const addData = async () => {
 
     post2.user = user; 
 
-    await user.save();
-    await post1.save();
+    await post2.save();
 }
 
 addData();
