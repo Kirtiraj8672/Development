@@ -29,8 +29,9 @@ const postSchema = new Schema({
     },
     likes : {
         type : Number ,
-    }
+    },
     user : {
-        type : String
+        type : Schema.Types.ObjectId,
+        ref : "User"
     }
 })
