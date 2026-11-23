@@ -35,3 +35,7 @@ const postSchema = new Schema({
         ref : "User"
     }
 })
+
+
+const User = mongoose.model("User" , userScehma);
+const Post - mongoose
