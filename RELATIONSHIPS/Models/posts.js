@@ -27,7 +27,10 @@ const postSchema = new Schema({
     content :{
         type: String,
     },
-    like : {
+    likes : {
         type : Number ,
+    }
+    user : {
+        type : String
     }
 })
