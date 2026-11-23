@@ -59,7 +59,7 @@ const addData = async () => {
     post1.user = user1; 
 
     await user1.save();
-    await post1.data();
+    await post1.save();
 }
 
 addData();
