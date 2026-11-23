@@ -45,4 +45,8 @@ const Post = mongoose.model("Post", postSchema);
 
 //function to add data 
 
-const add
+const addData = async () => {
+    let user1 = new User({
+        
+    })
+}
