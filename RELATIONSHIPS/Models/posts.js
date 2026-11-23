@@ -43,8 +43,29 @@ const User = mongoose.model("User" , userScehma);
 const Post = mongoose.model("Post", postSchema);
 
 
-//function to add data 
+//function to add data and create a post1 
 
+// const addData = async () => {
+//     let user1 = new User({
+//         username : "Rajesh Kumar",
+//         email : "rajesh@gmail.com"
+//     });
+
+//     let post1 = new Post({
+//         content: "Hello World",
+//         likes: 7
+//     });
+
+//     post1.user = user1; 
+
+//     await user1.save();
+//     await post1.save();
+// }
+
+// addData();
+
+
+//makeing post for same user rajesh 
 const addData = async () => {
     let user1 = new User({
         username : "Rajesh Kumar",
