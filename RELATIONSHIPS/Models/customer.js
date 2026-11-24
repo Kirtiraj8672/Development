@@ -72,7 +72,12 @@ findCustomer();
             name : " Shyam "
         });
 
-        let newOrder = 
+        let newOrder = new Order ({
+            item : "Pizza",
+            price : 250 
+        });
+
+        
     }
 
 
