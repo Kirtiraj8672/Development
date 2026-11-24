@@ -34,14 +34,14 @@ const customerSchema = new Schema ({
 })
 
 
-//pre middleware 
+//pre middleware for FindOneAndDelete
 
 Schema.pre("findOneAndDelete", async() => {
-    console.log("preMiddelWare");
+    console.log("pre MiddelWare");
 });
-//post middle ware for FindOneAndDelete 
+//post middleware for FindOneAndDelete 
 Schema.pre("findOneAndDelete", async() => {
-    console.log("preMiddelWare");
+    console.log("post MiddelWare");
 });
 
 
