@@ -36,10 +36,16 @@ const customerSchema = new Schema ({
 
 //pre middleware for FindOneAndDelete
 
-customerSchema.pre("findOneAndDelete", async() => {
-    console.log("pre MiddelWare");
-});
+// customerSchema.pre("findOneAndDelete", async() => {
+//     console.log("pre MiddelWare");
+// });
+
+
 //post middleware for FindOneAndDelete 
+customerSchema.post("findOneAndDelete", async() => {
+    console.log("post MiddelWare");
+});
+//post middleware checking 
 customerSchema.post("findOneAndDelete", async() => {
     console.log("post MiddelWare");
 });
