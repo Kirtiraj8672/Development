@@ -145,7 +145,7 @@ app.delete("/listings/:id", wrapAsync(async (req,res) => {
 
 
 // Catch-all route: Handles requests to undefined routes and throws a 404 error
-app.all( (req, res, next) => {
+app.all( "/{*splat}" , (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!!!"));
 });
 
