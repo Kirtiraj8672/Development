@@ -98,7 +98,7 @@ const findCustomer = async ()=>{
 
     }
 
-    addCust();
+    //addCust();
 
 
 // delete a customer froma a Database 
@@ -108,7 +108,7 @@ const delCust = async () =>{
     console.log(data);
 }
 
-    //delCust();
+    delCust();
 
 //order adding 
 // const addOrder = async ()=> {
