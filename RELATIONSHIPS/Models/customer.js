@@ -42,12 +42,13 @@ const customerSchema = new Schema ({
 
 
 //post middleware for FindOneAndDelete 
-customerSchema.post("findOneAndDelete", async() => {
-    console.log("post MiddelWare");
-});
+// customerSchema.post("findOneAndDelete", async() => {
+//     console.log("post MiddelWare");
+// });
+
 //post middleware checking 
-customerSchema.post("findOneAndDelete", async() => {
-    console.log("post MiddelWare");
+customerSchema.post("findOneAndDelete", async(data) => {
+    console.log(data);
 });
 
 
@@ -104,7 +105,7 @@ const findCustomer = async ()=>{
 
     }
 
-    //addCust();
+    addCust();
 
 
 // delete a customer froma a Database 
@@ -114,7 +115,7 @@ const delCust = async () =>{
     console.log(data);
 }
 
-    delCust();
+    //delCust();
 
 //order adding 
 // const addOrder = async ()=> {
