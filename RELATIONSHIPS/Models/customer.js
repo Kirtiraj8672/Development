@@ -40,7 +40,7 @@ customerSchema.pre("findOneAndDelete", async() => {
     console.log("pre MiddelWare");
 });
 //post middleware for FindOneAndDelete 
-customerSchema.pre("findOneAndDelete", async() => {
+customerSchema.post("findOneAndDelete", async() => {
     console.log("post MiddelWare");
 });
 
@@ -75,7 +75,7 @@ const findCustomer = async ()=>{
 }
 
 
-findCustomer();
+//findCustomer();
 
 
 // add a customer in Data base 
@@ -98,17 +98,17 @@ findCustomer();
 
     }
 
-    //addCust();
+    addCust();
 
 
 // delete a customer froma a Database 
 
 const delCust = async () =>{
-    let data = await Customer.findByIdAndDelete("6b05b8e516310c9a0d7fb3aa");
+    let data = await Customer.findByIdAndDelete("6b05b963011c153fc05f1508");
     console.log(data);
 }
 
-    delCust();
+    //delCust();
 
 //order adding 
 // const addOrder = async ()=> {
