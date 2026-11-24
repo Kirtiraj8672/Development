@@ -86,6 +86,8 @@ findCustomer();
 
     }
 
+    addCust();
+
 
 // delete a customer froma a Database 
 //order adding 
