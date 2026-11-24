@@ -36,7 +36,10 @@ const customerSchema = new Schema ({
 
 //pre middleware 
 
-Schema.pre("find")
+Schema.pre("findOneAndDelete", async() => {
+    console.log("pre")
+
+})
 
 const Order = mongoose.model("Order" , orderSchema);
 
