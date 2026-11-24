@@ -47,8 +47,10 @@ const customerSchema = new Schema ({
 // });
 
 //post middleware checking 
-customerSchema.post("findOneAndDelete", async(data) => {
-    console.log(data);
+customerSchema.post("findOneAndDelete", async(customer) => {
+    if(customer.order.length){
+        let res = await 
+    }
 });
 
 
