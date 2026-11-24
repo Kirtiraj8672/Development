@@ -33,6 +33,11 @@ const customerSchema = new Schema ({
     ]
 })
 
+
+//pre middleware 
+
+Schema.pre("find")
+
 const Order = mongoose.model("Order" , orderSchema);
 
 const Customer = mongoose.model("Customer" , customerSchema);
