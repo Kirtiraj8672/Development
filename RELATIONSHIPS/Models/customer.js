@@ -36,7 +36,7 @@ const customerSchema = new Schema ({
 
 //pre middleware for FindOneAndDelete
 
-Schema.pre("findOneAndDelete", async() => {
+customerSchema.pre("findOneAndDelete", async() => {
     console.log("pre MiddelWare");
 });
 //post middleware for FindOneAndDelete 
