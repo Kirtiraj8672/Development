@@ -85,7 +85,7 @@ findCustomer();
         });
 
         let newOrder = new Order ({
-            item : "Pizza",
+            item : "Burger",
             price : 250 
         });
 
@@ -104,7 +104,7 @@ findCustomer();
 // delete a customer froma a Database 
 
 const delCust = async () =>{
-    let data = await Customer.findByIdAndDelete("6b059a4de142372479663ac5");
+    let data = await Customer.findByIdAndDelete("6b05b88794c18d3d16f30ed4");
     console.log(data);
 }
 
