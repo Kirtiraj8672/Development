@@ -69,7 +69,6 @@ findCustomer();
 // add a customer in Data base 
     const addCust = async() => {
         name : " Shyam ",
-        
     }
 
 
