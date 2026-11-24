@@ -48,7 +48,7 @@ const customerSchema = new Schema ({
 
 //post middleware checking 
 customerSchema.post("findOneAndDelete", async(customer) => {
-    if(customer.order.length){
+    if(customer.orders.length){
         let res = await Order.deleteMany({ _id : { $in: customer.orders} });
         console.log(res);
     }
@@ -108,13 +108,13 @@ const findCustomer = async ()=>{
 
     }
 
-    //addCust();
+    addCust();
 
 
 // delete a customer froma a Database 
 
 const delCust = async () =>{
-    let data = await Customer.findByIdAndDelete("6b05bc1d31e0239c3d0d0c1e");
+    let data = await Customer.findByIdAndDelete("6b05bcedc16709e978e8d3ef");
     console.log(data);
 }
 
