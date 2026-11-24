@@ -98,17 +98,17 @@ findCustomer();
 
     }
 
-    addCust();
+    //addCust();
 
 
 // delete a customer froma a Database 
 
 const delCust = async () =>{
-    let data = await Customer.findByIdAndDelete("6b05b88794c18d3d16f30ed4");
+    let data = await Customer.findByIdAndDelete("6b05b8e516310c9a0d7fb3aa");
     console.log(data);
 }
 
-    //delCust();
+    delCust();
 
 //order adding 
 // const addOrder = async ()=> {
