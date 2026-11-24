@@ -67,7 +67,10 @@ findCustomer();
 
 
 // add a customer in Data base 
-    const add
+    const addCust = async() => {
+        name : " Shyam ",
+        
+    }
 
 
 // delete a customer froma a Database 
