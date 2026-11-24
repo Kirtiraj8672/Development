@@ -90,6 +90,12 @@ findCustomer();
 
 
 // delete a customer froma a Database 
+
+const del = async () =>{
+    let data = await Customer.findByIdAndDelete();
+    console.log(data);
+}
+
 //order adding 
 // const addOrder = async ()=> {
 //     let res = await Order.insertMany([
