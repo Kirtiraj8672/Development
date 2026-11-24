@@ -77,7 +77,7 @@ findCustomer();
             price : 250 
         });
 
-        
+        newCust.push(newOrder);
     }
 
 
