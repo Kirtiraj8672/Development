@@ -37,9 +37,13 @@ const customerSchema = new Schema ({
 //pre middleware 
 
 Schema.pre("findOneAndDelete", async() => {
-    console.log("pre")
+    console.log("preMiddelWare");
+});
+//post middle ware for FindOneAndDelete 
+Schema.pre("findOneAndDelete", async() => {
+    console.log("preMiddelWare");
+});
 
-})
 
 const Order = mongoose.model("Order" , orderSchema);
 
