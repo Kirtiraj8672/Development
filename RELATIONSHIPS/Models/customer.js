@@ -86,15 +86,17 @@ findCustomer();
 
     }
 
-    addCust();
+    //addCust();
 
 
 // delete a customer froma a Database 
 
-const del = async () =>{
+const delCust = async () =>{
     let data = await Customer.findByIdAndDelete();
     console.log(data);
 }
+
+delCust();
 
 //order adding 
 // const addOrder = async ()=> {
