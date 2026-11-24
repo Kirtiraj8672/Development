@@ -68,7 +68,11 @@ findCustomer();
 
 // add a customer in Data base 
     const addCust = async() => {
-        name : " Shyam ",
+        let newCust = new Customer ({
+            name : " Shyam "
+        });
+
+        let newOrder = 
     }
 
 
