@@ -77,7 +77,11 @@ findCustomer();
             price : 250 
         });
 
-        newCust.push(newOrder);
+        newCust.orders.push(newOrder);
+
+        await newCust.save();
+        await newOrder.save();
+
     }
 
 
