@@ -92,7 +92,7 @@ findCustomer();
 // delete a customer froma a Database 
 
 const delCust = async () =>{
-    let data = await Customer.findByIdAndDelete();
+    let data = await Customer.findByIdAndDelete("6b059a4de142372479663ac5");
     console.log(data);
 }
 
