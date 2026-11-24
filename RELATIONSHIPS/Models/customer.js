@@ -65,6 +65,12 @@ const findCustomer = async ()=>{
 
 findCustomer();
 
+
+// add a customer in Data base 
+    const add
+
+
+// delete a customer froma a Database 
 //order adding 
 // const addOrder = async ()=> {
 //     let res = await Order.insertMany([
