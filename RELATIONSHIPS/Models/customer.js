@@ -108,7 +108,7 @@ const findCustomer = async ()=>{
 
     }
 
-    addCust();
+    //addCust();
 
 
 // delete a customer froma a Database 
