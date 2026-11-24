@@ -82,6 +82,8 @@ findCustomer();
         await newCust.save();
         await newOrder.save();
 
+        console.log("added new customer");
+
     }
 
 
